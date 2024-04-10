@@ -1,0 +1,326 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "api_gestion_factura",
+    "dateExported": "2024-04-10T12:22:32.647Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "530bd5ac-fc98-49c4-b24c-7901ed84e917",
+            "name": "usuarios",
+            "containerId": "",
+            "created": "2024-04-06T18:52:51.704Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "43fe06ce-d59d-473a-8ed0-cf46229eb5a5",
+            "name": "categorias",
+            "containerId": "",
+            "created": "2024-04-06T18:53:10.122Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "productos",
+            "containerId": "",
+            "created": "2024-04-06T20:18:15.032Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "7de031e9-84a0-4871-8fd3-e4677399a4fd",
+            "name": "facturas",
+            "containerId": "",
+            "created": "2024-04-07T06:15:19.869Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "38adc4b5-bc8e-46f8-928b-fcb1cf5411ef",
+            "name": "dashboard",
+            "containerId": "",
+            "created": "2024-04-07T15:19:09.825Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "a8bdb848-214e-4441-b087-ebbaff1b4295",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "43fe06ce-d59d-473a-8ed0-cf46229eb5a5",
+            "name": "crear_nueva_categoria",
+            "url": "localhost:8080/categoria/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-06T18:45:32.835Z",
+            "modified": "2024-04-06T19:12:00.464Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Electronicos\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDM0Mjk5LCJpYXQiOjE3MTI0MzA2OTl9.cp9TAVW4wmGT6QdvYXxltXEcX4bS2NUfUCIhgZaDfuI"
+            },
+            "tests": []
+        },
+        {
+            "_id": "96d0b7af-52c1-4e4c-a2ee-5516e197fcd1",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "530bd5ac-fc98-49c4-b24c-7901ed84e917",
+            "name": "iniciar_session",
+            "url": "localhost:8080/user/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-06T18:47:23.168Z",
+            "modified": "2024-04-06T18:47:49.350Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"perezbuenojuliandavid@gmail.com\",\n  \"password\":\"JDPerez1005\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a2660d8f-acee-45f2-aa33-dab37bbdfde2",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "530bd5ac-fc98-49c4-b24c-7901ed84e917",
+            "name": "actualizar_datos_de_usuario",
+            "url": "localhost:8080/user/update_status_users",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-06T18:49:41.082Z",
+            "modified": "2024-04-06T18:50:28.474Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":2,\n  \"status\":true\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3e350678-7715-46d6-9846-24b59fc20b76",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "530bd5ac-fc98-49c4-b24c-7901ed84e917",
+            "name": "listar_usuarios",
+            "url": "localhost:8080/user/list_users",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-06T18:50:51.474Z",
+            "modified": "2024-04-06T18:51:02.124Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "21f03df9-f711-4ef3-8faa-d630eee89bcc",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "530bd5ac-fc98-49c4-b24c-7901ed84e917",
+            "name": "agregar_usuarios",
+            "url": "localhost:8080/user/signup",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-04-06T18:51:42.706Z",
+            "modified": "2024-04-06T18:52:20.831Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"juan\",\n  \"numeroDeContacto\":\"3120063344\",\n  \"email\":\"lozanoj@gmail.com\",\n  \"password\":\"jaja1105\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "582daa63-aea2-4770-a862-b8d70c5c3ba6",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "43fe06ce-d59d-473a-8ed0-cf46229eb5a5",
+            "name": "listar_categorias",
+            "url": "localhost:8080/categoria/list_categories",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-04-06T19:11:34.046Z",
+            "modified": "2024-04-06T19:12:24.241Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDM0Mjk5LCJpYXQiOjE3MTI0MzA2OTl9.cp9TAVW4wmGT6QdvYXxltXEcX4bS2NUfUCIhgZaDfuI"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c74058ff-5c8b-4999-a3d0-32f8acefce9c",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "43fe06ce-d59d-473a-8ed0-cf46229eb5a5",
+            "name": "actulizar_categorias",
+            "url": "localhost:8080/categoria/update_categories",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-04-06T19:37:45.295Z",
+            "modified": "2024-04-06T19:40:06.078Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"1\",\n  \"nombre\":\"batidos\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDM1OTk0LCJpYXQiOjE3MTI0MzIzOTR9.ZLDkr0qQFnyv-pmVesm4wkvjKVjifS8zgJmgMKfz488"
+            },
+            "tests": []
+        },
+        {
+            "_id": "09cb0e29-dca5-4f52-8ad3-8da07ebddf21",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "crear_productos",
+            "url": "localhost:8080/producto/add",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-04-06T20:18:45.593Z",
+            "modified": "2024-04-06T20:20:43.743Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoriaId\":\"2\",\n  \"nombre\":\"Laptop HP\",\n  \"descripcion\":\"Laptop con 8de RAM\",\n  \"precio\":\"1500\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDM4MzQxLCJpYXQiOjE3MTI0MzQ3NDF9.s-ku-X1pGlMD5e_uMAU0QJIp7ZpTxH9sGDHcRpGm5H8"
+            },
+            "tests": []
+        },
+        {
+            "_id": "aa6d352a-553a-4965-ae31-72e39bcd5bbe",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "listar_productos",
+            "url": "localhost:8080/producto/products_list",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-04-06T22:33:20.738Z",
+            "modified": "2024-04-06T22:33:48.942Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDQ2MzcwLCJpYXQiOjE3MTI0NDI3NzB9._djARQ4FjsC3H7anZGuZf3WDMb2ljuDirsKKMKQWNR8"
+            },
+            "tests": []
+        },
+        {
+            "_id": "c79de16d-0ff1-4d0b-8cf1-a746fd4c47cc",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "actualizar_productos",
+            "url": "localhost:8080/producto/update",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-04-06T22:54:49.429Z",
+            "modified": "2024-04-06T23:04:10.378Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"categoriaId\":\"2\",\n  \"id\":\"1\",\n  \"nombre\":\"Laptop Actualizada\",\n  \"precio\":\"4000\",\n  \"descripcion\":\"hola\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDQ4MTkyLCJpYXQiOjE3MTI0NDQ1OTJ9.Q1c5ZtCvve6Mwk8hlaB036CTmiGIN4zOj0dxDo5c4Js"
+            },
+            "tests": []
+        },
+        {
+            "_id": "81ae6a77-c88e-49ff-8dcd-230e6c40080a",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "actualizar_estado_producto",
+            "url": "localhost:8080/producto/updateStatus",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-04-07T00:27:20.749Z",
+            "modified": "2024-04-07T00:29:17.148Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":\"1\",\n  \"status\":\"false\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDUzMzQyLCJpYXQiOjE3MTI0NDk3NDJ9.X9cjmiHseuLGQPt8FbNXXuwSt6oTIsOXhnn6fwpAd64"
+            },
+            "tests": []
+        },
+        {
+            "_id": "2f8a144a-5a5a-4ca8-b8e1-8059a69661d8",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "ae745977-4959-4ed0-92c2-698a879e6e98",
+            "name": "listar_productos_categoria",
+            "url": "localhost:8080/producto/get_by_Categoria/2",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-04-07T01:26:20.579Z",
+            "modified": "2024-04-07T01:34:26.566Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDU3MjM5LCJpYXQiOjE3MTI0NTM2Mzl9.-pyMGFEiDjpuRUKJeZsK9rLB_SZwvTwm4DlTcABnQF8"
+            },
+            "tests": []
+        },
+        {
+            "_id": "66dcc624-70fb-42e7-b7ec-fdc8002c2da3",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "7de031e9-84a0-4871-8fd3-e4677399a4fd",
+            "name": "generar_facturas",
+            "url": "localhost:8080/factura/generar_reporte",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-04-07T06:15:42.749Z",
+            "modified": "2024-04-07T06:16:58.964Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\"fileName\":\"reporte-factura\",\"numeroContacto\":\"981091672\",\"email\":\"test@gmail.com\",\"nombre\":\"Test\",\"metodoPago\":\"Cash\",\"productoDetalles\":\"[{\\\"id\\\":18,\\\"nombre\\\":\\\"Nombre 01\\\",\\\"categoria\\\":\\\"Coffee\\\",\\\"cantidad\\\":\\\"1\\\",\\\"precio\\\":120,\\\"total\\\":120},{\\\"id\\\":19,\\\"nombre\\\":\\\"Nombre 02\\\",\\\"categoria\\\":\\\"Coffee\\\",\\\"cantidad\\\":\\\"3\\\",\\\"precio\\\":220,\\\"total\\\":120},{\\\"id\\\":20,\\\"nombre\\\":\\\"Nombre 03\\\",\\\"categoria\\\":\\\"Coffee\\\",\\\"cantidad\\\":\\\"3\\\",\\\"precio\\\":120,\\\"total\\\":120},{\\\"id\\\":21,\\\"nombre\\\":\\\"Nombre 04\\\",\\\"categoria\\\":\\\"Coffee\\\",\\\"cantidad\\\":\\\"1\\\",\\\"precio\\\":120,\\\"total\\\":120}]\",\"total\":\"279\"}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNDc0MTYyLCJpYXQiOjE3MTI0NzA1NjJ9.GxT0vsaNJvIlMqeB-aMK6Trbb0PpiB90paq_AhFrKmM"
+            },
+            "tests": []
+        },
+        {
+            "_id": "704c5bd3-4139-44d9-afdc-ddab84af0ffa",
+            "colId": "bb645aad-5806-4c2d-a4d9-ae990b4c8020",
+            "containerId": "38adc4b5-bc8e-46f8-928b-fcb1cf5411ef",
+            "name": "detalles_datos",
+            "url": "localhost:8080/dashboard/detalles",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-04-07T15:19:38.989Z",
+            "modified": "2024-04-07T15:20:17.521Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZXJlemJ1ZW5vanVsaWFuZGF2aWRAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzEyNTA2ODA5LCJpYXQiOjE3MTI1MDMyMDl9.3_6wgaGtTU0Jp5ldZ-RzDN5-urYQJC56QWOAXtcpDXM"
+            },
+            "tests": []
+        }
+    ]
+}
